@@ -18,7 +18,7 @@ import android.hardware.Camera.AutoFocusCallback;
 import android.os.Bundle;
 import android.os.Handler;
 import androidx.core.app.ActivityCompat;
-import androidx.core.app.content.ContextCompat;
+import androidx.core.content.ContextCompat;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.SurfaceHolder;
