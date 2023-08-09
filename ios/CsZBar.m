@@ -44,7 +44,7 @@
 - (void)scan: (CDVInvokedUrlCommand*)command; 
 {
     if ([self notHasPermission]) {
-        NSString * error = NSLocalizedString(@"Access to the camera has been prohibited; please enable it in the Settings app to continue.",nil);
+        NSString * error = NSLocalizedString(@"notHasPermission",nil);
         [self.commandDelegate
          sendPluginResult: [CDVPluginResult
                             resultWithStatus: CDVCommandStatus_ERROR
