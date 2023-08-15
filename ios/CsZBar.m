@@ -33,10 +33,25 @@
     return YES;
 }
 
+-(BOOL)notHasPermission
+{
+    AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+    return (authStatus == AVAuthorizationStatusDenied ||
+            authStatus == AVAuthorizationStatusRestricted);
+}
 #pragma mark - Plugin API
 
 - (void)scan: (CDVInvokedUrlCommand*)command; 
 {
+    if ([self notHasPermission]) {
+        NSString * error = NSLocalizedString(@"notHasPermission",nil);
+        [self.commandDelegate
+         sendPluginResult: [CDVPluginResult
+                            resultWithStatus: CDVCommandStatus_ERROR
+                            messageAsString:error]
+        callbackId: [command callbackId]];
+        return;
+    }
     if (self.scanInProgress) {
         [self.commandDelegate
          sendPluginResult: [CDVPluginResult
