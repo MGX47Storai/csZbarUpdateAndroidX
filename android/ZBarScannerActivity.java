@@ -58,6 +58,7 @@ implements SurfaceHolder.Callback {
     public static final String EXTRA_QRVALUE = "qrValue";
     public static final String EXTRA_PARAMS = "params";
     public static final int RESULT_ERROR = RESULT_FIRST_USER + 1;
+    public static final int DENIED_CAMERA_PERMISSION_ERROR = RESULT_FIRST_USER + 2;
     private static final int CAMERA_PERMISSION_REQUEST = 1;
     // State -----------------------------------------------------------
 
@@ -116,7 +117,9 @@ implements SurfaceHolder.Callback {
                     setUpCamera();
                 } else {
 
-                   onBackPressed();
+                   // onBackPressed();
+                    setResult(DENIED_CAMERA_PERMISSION_ERROR);
+                    super.onBackPressed();
                 }
                 return;
             }

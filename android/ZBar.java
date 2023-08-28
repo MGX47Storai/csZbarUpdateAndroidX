@@ -68,6 +68,9 @@ public class ZBar extends CordovaPlugin {
                 case ZBarScannerActivity.RESULT_ERROR:
                     scanCallbackContext.error("Scan failed due to an error");
                     break;
+                case ZBarScannerActivity.DENIED_CAMERA_PERMISSION_ERROR:
+                    scanCallbackContext.error("notHasPermission");
+                    break;
                 default:
                     scanCallbackContext.error("Unknown error");
             }
