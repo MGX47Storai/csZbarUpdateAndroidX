@@ -56,7 +56,7 @@
         <source-file src="android/libs/armeabi-v7a/libcharset.so" target-dir="libs/armeabi-v7a" />
         <source-file src="android/libs/arm64-v8a/libiconv.so" target-dir="libs/arm64-v8a" />
         <source-file src="android/libs/arm64-v8a/libzbarjni.so" target-dir="libs/arm64-v8a" />
-        <source-file src="android/libs/arm64-v8a/libcharset.so" target-dir="libs/armeabi-v8a" />
+        <source-file src="android/libs/arm64-v8a/libcharset.so" target-dir="libs/arm64-v8a" />
         <source-file src="android/libs/x86/libiconv.so" target-dir="libs/x86" />
         <source-file src="android/libs/x86/libzbarjni.so" target-dir="libs/x86" />
         <source-file src="android/libs/x86/libcharset.so" target-dir="libs/x86" />
