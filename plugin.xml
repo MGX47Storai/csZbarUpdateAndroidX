@@ -90,16 +90,15 @@
         <framework src="CoreMedia.framework" />
         <framework src="CoreVideo.framework" />
         <framework src="QuartzCore.framework" />
-        <framework src="WebKit.framework" weak="true" />
         <framework src="libiconv.dylib" />
-        <source-file src="ios/libzbar.a" framework="true" custom="true"/>
+        <!-- LBXZBarSDK (MxABC) build: ZBarHelpController/UIWebView removed -->
+        <framework src="ios/libzbar.xcframework" custom="true" embed="false" />
         <source-file src="ios/CsZBar.m" />
         <header-file src="ios/CsZBar.h" />
         <source-file src="ios/AlmaZBarReaderViewController.m" />
         <header-file src="ios/AlmaZBarReaderViewController.h" />
         <header-file src="ios/ZBarSDK/ZBarCameraSimulator.h" />
         <header-file src="ios/ZBarSDK/ZBarCaptureReader.h" />
-        <header-file src="ios/ZBarSDK/ZBarHelpController.h" />
         <header-file src="ios/ZBarSDK/ZBarImage.h" />
         <header-file src="ios/ZBarSDK/ZBarImageScanner.h" />
         <header-file src="ios/ZBarSDK/ZBarReaderController.h" />
